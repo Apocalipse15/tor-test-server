@@ -38,6 +38,10 @@ app.post("/shutdown", (req, res) => {
   }, 5000);
 });
 
+app.get("/status", (req, res) => {
+  res.json({ status: "Server is running" });
+});
+
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
